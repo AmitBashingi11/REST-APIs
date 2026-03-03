@@ -1,7 +1,10 @@
 package com.absnippets.demoREST.controller;
 
 import com.absnippets.demoREST.model.CloudVendor;
+import com.absnippets.demoREST.response.ResponseHandler;
 import com.absnippets.demoREST.service.CloudVendorService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,9 +19,11 @@ public class CloudVendorController {
         this.cloudVendorService = cloudVendorService;
     }
     @GetMapping("{vendorID}")
-    public CloudVendor getVendorDetails(@PathVariable("vendorID") String vendorID){
+    public ResponseEntity<Object> getVendorDetails(@PathVariable("vendorID") String vendorID){
 
-        return cloudVendorService.getCloudVendor(vendorID);
+         return ResponseHandler.responseBuilder("Requested Vendor Details are given below",
+                HttpStatus.OK,cloudVendorService.getCloudVendor(vendorID));
+
     }
 
     @GetMapping()

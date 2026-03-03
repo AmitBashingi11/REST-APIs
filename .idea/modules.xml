@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/demoREST.iml" filepath="$PROJECT_DIR$/.idea/demoREST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/REST-APIs.iml" filepath="$PROJECT_DIR$/.idea/REST-APIs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demoREST/demoREST.iml" filepath="$PROJECT_DIR$/demoREST/demoREST.iml" />
     </modules>
   </component>
 </project>
